@@ -59,12 +59,14 @@ function updateValues(city, country, temp, feelsLike, humidity, windSpeed) {
   ).textContent = `Feels Like: ${feelsLike.toFixed(0)}`;
   document.querySelector(".humidity").textContent = `Humidity: ${humidity}%`;
   if (tempUnit === "f") {
-    document.querySelector(".temp").classList.add("f");
-    document.querySelector(".feels_like").classList.add("f");
+    document.querySelector(".temp").classList.toggle("f");
+    document.querySelector(".feels_like").classList.toggle("f");
     document.querySelector(
       ".wind_speed"
     ).textContent = `Wind Speed: ${windSpeed.toFixed(1)} Miles/H`;
   } else {
+    document.querySelector(".temp").classList.toggle("f");
+    document.querySelector(".feels_like").classList.toggle("f");
     document.querySelector(".wind_speed").textContent = `Wind Speed: ${(
       windSpeed * 3.6
     ).toFixed(1)} KM/H`;
