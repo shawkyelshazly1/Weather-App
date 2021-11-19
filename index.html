@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="app">
+        <div class="search">
+          <input type="text" id="search_bar" placeholder="City or City,State" />
+          <button id="search_btn">Get Weather</button>
+          <div class="temp_switcher">
+            <span class="cels active">C</span>
+            <label class="switch">
+              <input class="temp_selector" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <span class="feh">F</span>
+          </div>
+        </div>
+        <p class="error">No Match Found!</p>
+        <div class="view">
+          <h1 class="city"></h1>
+          <div class="weather">
+            <h1 class="temp" data-temp="\00B0 C"></h1>
+            <div class="weather_details">
+              <p class="feels_like"></p>
+              <p class="humidity"></p>
+              <p class="wind_speed"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
